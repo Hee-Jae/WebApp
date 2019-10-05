@@ -1,0 +1,62 @@
+#top-header{
+	color:white;
+	background-color: #1D2475; 
+	text-align: right;
+}
+
+#top-header h2{
+	color:#CCCCCC;
+	font-size: 14pt;
+}
+
+.things_title{
+	border-bottom: 2px dashed blue;
+}
+
+.contents {
+	border: 10px solid white;
+	background-color: white;
+}
+
+.things{
+	border: 4px solid #1D2475;
+	border-radius: 15px;
+	background-color: #99CCFF;
+	padding: 5px;
+	margin-top: 10px;
+	overflow: hidden;
+	text-align: justify;
+}
+
+.things img{
+	float: right;
+}
+
+body{
+	background-image: url('blueTextureBG.jpg');
+	margin-right: 10%;
+	margin-left: 10%;
+}
+
+.left-column{
+	float:left;
+	width:20%;
+	color : #CCCCCC;
+	list-style: #CCCCCC;
+	border: 4px solid #1D2475;
+	border-radius: 15px;
+	background-color: blue;
+	padding: 1%;
+	margin-top: 10px;
+	margin-right:10px;
+	text-align: justify;
+	overflow: hidden;
+}
+
+.column {
+	overflow: hidden;	
+}
+
+*:not([class]):not([id]):not(html):not(ul):hover{
+	background-color: #A6CE39;
+}
