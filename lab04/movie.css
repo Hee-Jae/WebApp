@@ -1,0 +1,124 @@
+body{
+    background-image: url(background.png);
+    font-size: 8pt;
+    font-family: Verdana, Tahoma, sans-serif;
+    margin:0;
+    padding:0;
+}
+
+.banner{
+    background-image: url('bannerbg.png');
+    background-repeat: repeat-x;
+    height: 50px;
+}
+
+.banner img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 50px;
+  }
+
+h1{
+    text-align: center;
+    font-size: 24pt;
+    font-weight: bold;
+    text-shadow: 3px 3px #999999;
+}
+
+.overall{
+    width:800px;
+    border: 4px gray solid;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.rottenbig{
+    background-image: url('rbg.png');
+    background-repeat: repeat-x;
+    height: 83px;
+}
+
+.rottenbig span{
+    font-size: 48pt;
+    color: red;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+.rottenbig img{
+    vertical-align: bottom;
+    height: 83px;
+}
+
+.left-side{
+    width: 550px;
+    overflow: hidden;
+}
+.overall > p{
+    background-color: #A2B964;
+    padding:5px;
+    margin:0;
+    text-align: center;
+    clear: right;
+}
+.left-column{
+    width: 47%;
+    float: left;
+    margin-left: 2%;
+}
+
+.right-column{
+    width: 47%;
+    float: right;
+    margin-right: 2%;
+}
+
+.each-review{
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.each-review span{
+    font-style: italic;
+}
+.each-review img{
+    float: left;
+    margin-right: 5px;
+}
+.each-review p:first-child{
+    font-weight: bold;
+    font-size: 8pt;
+    background-color: #E8DC9B;
+    border: 2px gray solid;
+    border-radius: 10px;
+    padding: 8px;
+    overflow: hidden;
+}
+.right-side{
+    float:right;
+    width: 250px;
+    background-color: #A2B964;
+    font-size: 8pt;
+    font-family: Arial, sans-serif;
+}
+dl{
+    margin:10pt;
+}
+dt{
+    font-weight: bold;
+    margin-top: 10pt;
+}
+ul{
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+}
+.validity{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+}
