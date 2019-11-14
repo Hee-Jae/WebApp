@@ -34,7 +34,7 @@
 
 		<?php
 		} elseif (!preg_match("/^([a-zA-Z]+[\-\s])*[a-zA-Z]+$/",$name)) { 
-		?> 
+		?>
 		<h1>Sorry</h1>
 		<p>You didn't provide a valid name. <a href="gradestore.html">Try again? </a></p>
 
@@ -66,9 +66,6 @@
 			file_put_contents($filename, $filedata, FILE_APPEND);
 			$file = file_get_contents($filename);
 			print $file;
-		?>
-		
-		<?php
 		}
 		?>
 		<?php
