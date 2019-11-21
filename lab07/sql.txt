@@ -84,7 +84,7 @@ WHERE id = actor_id
 GROUP BY actor_id
 ORDER BY count(movie_id) DESC LIMIT 7;
 
-SELECT genre
+SELECT genre 
 FROM movies_genres
 GROUP BY genre
 ORDER BY count(movie_id) DESC LIMIT 3;
