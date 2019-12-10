@@ -28,6 +28,11 @@ function ex6(){
 
 window.onload = function(){
     document.getElementById("textbox").style.fontSize = "12pt";
+    document.getElementById("pimpin").onclick = ex7_2;
+    document.getElementById("checkbox").onchange = ex9;
+    document.getElementById("snoopify").onclick = ex6;
+    document.getElementById("pig").onclick = ex9_2;
+    document.getElementById("Malkovitch").onclick = ex9_3;
 }
 function ex7(){
     var size = document.getElementById("textbox").style.fontSize;
@@ -45,5 +50,29 @@ function ex9(){
     }
     else{
         document.body.style.backgroundImage = "none";
+    }
+}
+
+function ex9_2(){
+    var str = document.getElementById("textbox").value;
+    var point = 0;
+    for(var i=0; i<str.length; i++){
+        if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' ||
+        str[i] == 'o' || str[i] =='u'){
+            break;
+        }
+        else{
+            point ++;
+        }
+    }
+    var front_str = str.substr(0,point);
+    var back_str = str.substr(point,str.length);
+    document.getElementById("textbox").value = back_str + front_str + "ay";
+}
+
+function ex9_3(){
+    var str = document.getElementById("textbox").value;
+    if(str.length >= 5){
+        var str = document.getElementById("textbox").value = "Malkovich"; 
     }
 }
