@@ -17,7 +17,7 @@
 		
 		<h2>Buy your Grade today!</h2>
 		
-		<!-- create an HTML Form -->
+		<!-- create an HTML Form -->"
 		<form action="cheater.php" method="POST">
 			<p>
 				Name: <input type="text" name="Name" pattern="^([a-zA-Z]+[\-\s])*[a-zA-Z]+$">
@@ -25,10 +25,10 @@
 			</p>
 			<p>
 				Course:
-				<label><input type="checkbox" name="CSE326"> CSE326 </label>
-				<label><input type="checkbox" name="CSE107"> CSE107</label>
-				<label><input type="checkbox" name="CSE603"> CSE603</label>
-				<label><input type="checkbox" name="CIN870"> CIN870</label>
+				<label><input type="checkbox" name="course[]" value="CSE326"> CSE326 </label>
+				<label><input type="checkbox" name="course[]" value="CSE107"> CSE107</label>
+				<label><input type="checkbox" name="course[]" value="CSE603"> CSE603</label>
+				<label><input type="checkbox" name="course[]" value="CIN870"> CIN870</label>
 			</p>
 			<p>
 				Grade: <select name="Grade">
@@ -39,7 +39,7 @@
 				</select>
 			</p>
 			<p>
-				Credit Card: <input type="text" name="Credit">
+				Credit Card: <input type="text" name="Credit" pattern="^[0-9]{16}$">
 				<label><input type="radio" name="Kind" value="Visa"> Visa </label>
 				<label><input type="radio" name="Kind" value="MasterCard"> MasterCard </label>
 			</p>

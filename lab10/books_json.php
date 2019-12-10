@@ -37,7 +37,36 @@ print "{\n  \"books\": [\n";
 // 1. read the "books.txt"
 // 2. search all the books that matches the given category 
 // 3. generate the result in JSON data format 
-
+$books = file($BOOKS_FILE);
+$first_book = 0;
+for($i = 0; $i < count($books); $i++){
+	list($title, $author, $book_category, $year, $price) = explode("|", trim($books[$i]));
+	if($category == $book_category && $first_book==0){
+		print "\t{";
+		print "\"category\":\"$category\", \"title\":\"$title\", \"author\":\"$author\", \"year\":\"$year\", \"price\":\"$price\"";
+		print "}\n";
+		// print "\t\t{";
+		// print "\"category\":\"$category\",\n";
+		// print "\t\t\"title\":\"$title\",\n";
+		// print "\t\t\"author\":\"$author\",\n";
+		// print "\t\t\"year\":\"$year\",\n";
+		// print "\t\t\"price\":\"$price\"\n";
+		// print "\t}\n";
+		$first_book = 1;
+	}
+	else if($category == $book_category){
+		print "\t,{";
+		print "\"category\":\"$category\", \"title\":\"$title\", \"author\":\"$author\", \"year\":\"$year\", \"price\":\"$price\"";
+		print "}\n";
+		// print "\t,{\n\t\t";
+		// print "\"category\":\"$category\",\n";
+		// print "\t\t\"title\":\"$title\",\n";
+		// print "\t\t\"author\":\"$author\",\n";
+		// print "\t\t\"year\":\"$year\",\n";
+		// print "\t\t\"price\":\"$price\"\n";
+		// print "\t}\n";
+	}
+}
 print "  ]\n}\n";
 
 ?>

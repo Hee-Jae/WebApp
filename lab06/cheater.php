@@ -9,23 +9,23 @@
 		
 		<?php
 		if(isset($_POST["Name"])) $name = $_POST["Name"];
-		if(isset($_POST["Name"])) $id = $_POST["ID"];
-		if(isset($_POST["Name"])) $grade = $_POST["Grade"];
-		if(isset($_POST["Name"])) $credit = $_POST["Credit"];
-		if(isset($_POST["Name"])) $kind = $_POST["Kind"];
-		$names = array();
-		if(isset($_POST["CSE326"])) array_push($names, "CSE326");
-		if(isset($_POST["CSE107"])) array_push($names, "CSE107");
-		if(isset($_POST["CSE603"])) array_push($names, "CSE603");
-		if(isset($_POST["CIN870"])) array_push($names, "CIN870");
+		if(isset($_POST["ID"])) $id = $_POST["ID"];
+		if(isset($_POST["Grade"])) $grade = $_POST["Grade"];
+		if(isset($_POST["Credit"])) $credit = $_POST["Credit"];
+		if(isset($_POST["Kind"])) $kind = $_POST["Kind"];
+		if(isset($_POST["course"])) $course = $_POST["course"];
+		$course_list = array();
+		foreach($course as $cs){
+			array_push($course_list, $cs);
+		}
 		
 		$isName = isset($_POST["Name"]);
 		$isID = isset($_POST["ID"]);
 		$isGrade = isset($_POST["Grade"]);
 		$isCredit = isset($_POST["Credit"]);
 		$isKind = isset($_POST["Kind"]);
-		$isClass = isset($_POST["CSE326"]) || isset($_POST["CSE107"]) || isset($_POST["CSE603"]) || isset($_POST["CIN870"]);
-		$isAllset = $isName && $isID && $isGrade && $isCredit && $isKind && $isClass;
+		$isCourse = isset($_POST["course"]);
+		$isAllset = $isName && $isID && $isGrade && $isCredit && $isKind && $isCourse;
 		if (!$isAllset){
 		?>
  
@@ -54,7 +54,7 @@
 		<ul> 
 			<li>Name: <?= $name ?></li>
 			<li>ID: <?= $id ?></li>
-			<li>Course: <?= processCheckbox($names) ?></li>
+			<li>Course: <?= processCheckbox($course_list) ?></li>
 			<li>Grade: <?= $grade ?> </li>
 			<li>Credit <?= $credit ?> (<?=$kind?>)</li>
 		</ul>
